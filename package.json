@@ -4,7 +4,10 @@
   "description": "In this project, you will demonstrate proficiency by writing unit tests and production code to satisfy the _Minimum Viable Product_ described below.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll --verbose --runInBand"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
   },
   "repository": {
     "type": "git",
@@ -15,8 +18,5 @@
   "bugs": {
     "url": "https://github.com/JLC6290/webtesting-i-challenge/issues"
   },
-  "homepage": "https://github.com/JLC6290/webtesting-i-challenge#readme",
-  "dependencies": {
-    "jest": "^26.0.1"
-  }
+  "homepage": "https://github.com/JLC6290/webtesting-i-challenge#readme"
 }

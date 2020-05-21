@@ -3,7 +3,7 @@ const enhancer = require('./enhancer.js');
 
 test('repair function to restore durability to 100', () => {
     const repairItem = { name: 'henry', durability: 50, enhancement: 10 };
-    const res = enchancer.repair(repairItem)
+    const res = enhancer.repair(repairItem)
     expect(res.durability).toEqual(100);
 });
 
@@ -28,12 +28,11 @@ test('fail function passes all conditions', () => {
         expect(res.durability).toEqual(failItem.durability - 10);
         expect(res.enhancement).toEqual(failItem.enhancement - 1);
     }
-
 })
 
 test('get function adds enhancement to name if enhancement > 0', () => {
     const getItem = { name: 'item4', durability: 50, enhancement: 5 };
-    const res = enhancer.getItem(getItem);
+    const res = enhancer.get(getItem);
     if(res.enhancement > 0){
         expect(res.name).toBe(`[+${res.enhancement}] item4`);
     }else{
